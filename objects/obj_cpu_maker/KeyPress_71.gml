@@ -1,0 +1,1 @@
+cpu = new make_CPU(true, 2, ["ALU", "Regs"]);
