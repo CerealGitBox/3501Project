@@ -44,3 +44,14 @@ function make_CPU(_rand_override, _layout, _parts) constructor {
 		show_debug_message(broken_parts[i]);
 	}
 }
+
+//DS map, converts strings into objects
+global.part_str_to_obj = ds_map_create();
+ds_map_add(global.part_str_to_obj,"CU", obj_part_CU);
+ds_map_add(global.part_str_to_obj,"ALU", obj_part_ALU);
+ds_map_add(global.part_str_to_obj,"MMU", obj_part_MMU);
+ds_map_add(global.part_str_to_obj,"Regs", obj_part_Regs);
+ds_map_add(global.part_str_to_obj,"Cache", obj_part_Cache);
+ds_map_add(global.part_str_to_obj,"BIU", obj_part_BIU);
+ds_map_add(global.part_str_to_obj,"MemCon", obj_part_MemCon);
+ds_map_add(global.part_str_to_obj,"Clock", obj_part_Clock);

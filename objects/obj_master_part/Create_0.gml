@@ -6,4 +6,5 @@ name_alpha = 0;
 name_scale = 0.5;
 fade_factor = 0.07;
 
+haunted = false;
 minigame = noone;

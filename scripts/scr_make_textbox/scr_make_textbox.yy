@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_make_textbox",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_make_textbox",
+  "parent":{
+    "name":"Text",
+    "path":"folders/Text.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
