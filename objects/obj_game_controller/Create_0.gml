@@ -2,6 +2,7 @@
 This is the main game controller, it is in charge of keeping track of
 and changing game states
 The GAME_STATE enum and global variables are established below
+VERY IMPORTANT that this object is persistent
 */
 
 enum GAME_STATE {
