@@ -1,0 +1,1 @@
+global.bonzi_current_sprite = spr_placeholder;

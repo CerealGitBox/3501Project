@@ -45,4 +45,6 @@ death_timer = level_timers[0];
 	//if the death timer reaches 0, the player fails the level and must restart
 	//every time a minigame is failed, 15 seconds is subtracted from the timer
 
+intro_box_spawned = false;
+
 

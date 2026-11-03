@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_test_text",
+  "%Name":"scr_text_lists",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_test_text",
+  "name":"scr_text_lists",
   "parent":{
     "name":"Text",
     "path":"folders/Text.yy",

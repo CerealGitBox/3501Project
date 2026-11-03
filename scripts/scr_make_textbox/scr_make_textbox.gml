@@ -10,3 +10,8 @@ scribble_typists_add_event("play_sound", function(element, params, char_index){
 	var snd_asset = asset_get_index(snd_name);
 	audio_play_sound(snd_asset, 1, false);
 });
+scribble_typists_add_event("change_spr", function(element, params, char_index){
+	var spr_name = string_trim(params[0]);
+	var spr_asset = asset_get_index(spr_name);
+	global.bonzi_current_sprite = spr_asset;
+});
