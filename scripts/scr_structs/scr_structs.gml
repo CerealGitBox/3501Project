@@ -1,25 +1,19 @@
 //this constructor makes CPU structs
-//it takes 3 arguments:
+//it takes 2 arguments:
 //	_rand_override (bool): allows user to override the random
 //		part generation and select their own parts to be broken
-//	_layout (int): determines the physical layout of the CPU,
-//		ranges from 0 to 6
 //	_parts (int): the number of parts that will be randomly
 //		chosen to be broken, if _rand_override is false
 //	_parts (array): the array of parts that will be broken, if
 //		_rand_override is true
 
-function make_CPU(_rand_override, _layout, _parts) constructor {
-	layout = _layout;
+function make_CPU(_rand_override, _parts) constructor {
 	part_list = [
-	"CU",		//control unit
-	"ALU",		//arithmetic logic unit
-	"MMU",		//memory management unit
-	"Regs",		//registers
-	"Cache",	//caches
-	"BIU",		//bus interface unit
-	"MemCon",	//memory controller
-	"Clock"		//clock (nss)
+	"ALU",			//arithmetic logic unit
+	"Clock",		//CPU clock
+	"FlashMem",		//flash memory
+	"ICP",			//instruction control pipeline
+	"SRAM"			//data SRAM
 	];
 	broken_parts = [];
 	
@@ -45,13 +39,91 @@ function make_CPU(_rand_override, _layout, _parts) constructor {
 	}
 }
 
-//DS map, converts strings into objects
-global.part_str_to_obj = ds_map_create();
-ds_map_add(global.part_str_to_obj,"CU", obj_part_CU);
-ds_map_add(global.part_str_to_obj,"ALU", obj_part_ALU);
-ds_map_add(global.part_str_to_obj,"MMU", obj_part_MMU);
-ds_map_add(global.part_str_to_obj,"Regs", obj_part_Regs);
-ds_map_add(global.part_str_to_obj,"Cache", obj_part_Cache);
-ds_map_add(global.part_str_to_obj,"BIU", obj_part_BIU);
-ds_map_add(global.part_str_to_obj,"MemCon", obj_part_MemCon);
-ds_map_add(global.part_str_to_obj,"Clock", obj_part_Clock);
+//this constructor makes paper structs
+//it takes 1 argument:
+	//_text (string): the text displayed on the paper, cast as noone for random selections
+function make_paper(_text) constructor {
+	text = "";
+	broken_list = [];
+	
+	if (_text != noone && typeof(_text) == typeof("gabagool")) {
+		text = _text;
+		
+	} else {
+		//array of parts
+		var _part_list = [
+		"ALU", "Clock", "FlashMem", "ICP", "SRAM"
+		];
+		
+		//string bools
+		var _has_ALU = false;
+		var _has_Clock = false;
+		var _has_FlashMem = false;
+		var _has_ICP = false;
+		var _has_SRAM = false;
+		
+		//chance to add a broken part scales with levels
+		var _level = global.level_number;
+		var _add_chance = (_level * 0.1) + 0.1;
+		
+		//guarantee every CPU has at least 1 broken part
+		var _rfirst = irandom_range(0, array_length(_part_list) - 1);
+		array_push(broken_list, _part_list[_rfirst]);
+		array_delete(_part_list, _rfirst, 1);
+		
+		//add more broken parts by chance
+		for (var i = 0; i < global.max_parts[_level] - 1; i++) {
+			var _roll = random_range(0, 1);
+			if (_roll <= _add_chance) {
+				var _rpart = irandom_range(0, array_length(_part_list) - 1);
+				array_push(broken_list, _part_list[_rpart]);
+				array_delete(_part_list, _rpart, 1);
+			}
+		}
+		
+		//correct bools
+		for (var i = 0; i < array_length(broken_list); i++) {
+			switch broken_list[i] {
+				case "ALU":
+					_has_ALU = true;
+				break;
+				case "Clock":
+					_has_Clock = true;
+				break;
+				case "FlashMem":
+					_has_FlashMem = true;
+				break;
+				case "ICP":
+					_has_ICP = true;
+				break;
+				case "SRAM":
+					_has_SRAM = true;
+				break;
+			}
+		}
+		
+		//concat strings based on bools
+		if (_has_ALU) {
+			var _rstring = irandom_range(0, array_length(global.ALU_text) - 1);
+			text += global.ALU_text[_rstring];
+		}
+		if (_has_Clock) {
+			var _rstring = irandom_range(0, array_length(global.Clock_text) - 1);
+			text += global.Clock_text[_rstring];
+		}
+		if (_has_FlashMem) {
+			var _rstring = irandom_range(0, array_length(global.FlashMem_text) - 1);
+			text += global.FlashMem_text[_rstring];
+		}
+		if (_has_ICP) {
+			var _rstring = irandom_range(0, array_length(global.ICP_text) - 1);
+			text += global.ICP_text[_rstring];
+		}
+		if (_has_SRAM) {
+			var _rstring = irandom_range(0, array_length(global.SRAM_text) - 1);
+			text += global.SRAM_text[_rstring];
+		}
+		
+		show_debug_message("Final paper text: " + text);
+	}
+}

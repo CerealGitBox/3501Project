@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"v2",
+  "%Name":"coords",
+  "name":"coords",
+  "parent":{
+    "name":"Parts",
+    "path":"folders/Sprites/Parts.yy",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}

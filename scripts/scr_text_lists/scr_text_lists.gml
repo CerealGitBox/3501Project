@@ -25,6 +25,47 @@ global.intro_text = [ //14
 "You can view it at any time by pressing your 'F' key."
 ];
 
-global.ticket_text = [
+global.ALU_text = [
+"ALU 1;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"ALU 2;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"ALU 3;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"ALU 4;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"ALU 5;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"ALU 6;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+];
 
+global.Clock_text = [
+"Clock 1;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"Clock 2;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"Clock 3;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"Clock 4;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"Clock 5;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"Clock 6;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+];
+
+global.FlashMem_text = [
+"FlashMem 1;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"FlashMem 2;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"FlashMem 3;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"FlashMem 4;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"FlashMem 5;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"FlashMem 6;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+];
+
+global.ICP_text = [
+"ICP 1;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"ICP 2;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"ICP 3;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"ICP 4;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"ICP 5;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"ICP 6;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+];
+
+global.SRAM_text = [
+"SRAM 1;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"SRAM 2;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"SRAM 3;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"SRAM 4;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"SRAM 5;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"SRAM 6;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
 ];
