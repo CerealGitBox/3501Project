@@ -21,7 +21,7 @@ global.level_number = 0;
 enum SUBSTATE {
 	DEFAULT,		//player is not doing anything
 	JOB_CHOSEN,		//player has selected a paper but not gone into the computer yet
-	IN_CPU,			//player is inside the CPU looking for parts to fix
+	IN_COMPUTER,			//player is inside the CPU looking for parts to fix
 	IN_MINIGAME		//player has correctly chosen a broken part and is in a minigame
 };
 global.game_state = GAME_STATE.TITLE;
@@ -34,6 +34,8 @@ global.active_part = noone;
 	//if a CPU is active it will be set to that instance's ID
 	//otherwise it will be set to noone
 	//when a CPU is active the player will be taken to the minigame room
+global.part_list = [];
+	//global array to track what parts currently need to be fixed
 
 var _fps = game_get_speed(gamespeed_fps);
 global.level_timers = [
@@ -55,7 +57,11 @@ death_timer = global.level_timers[0];
 	//if the death timer reaches 0, the player fails the level and must restart
 	//every time a minigame is failed, 15 seconds is subtracted from the timer
 
+//spawn flags
 intro_box_spawned = false;
+first_folder_spawned = false;
+pc_spawned = false;
+cpu_spawned = false;
 
 global.game_finished = false;
 	//flag to check if player has completed the whole game

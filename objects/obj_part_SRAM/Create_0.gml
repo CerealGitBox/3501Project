@@ -1,3 +1,2 @@
 event_inherited();
-sprite = spr_part_SRAM;
-name_sprite = spr_placeholder;
+part_sprite = spr_part_SRAM;

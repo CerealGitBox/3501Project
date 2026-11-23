@@ -8,18 +8,34 @@ switch global.game_state {
 	case GAME_STATE.INTRO:
 		if (!global.mid_transition) {
 			if (!intro_box_spawned) {
-				make_textbox(global.intro_text, 0, 14, snd_bonzi_txt);
+				make_textbox(global.intro_text, 0, 1, snd_bonzi_txt);
 				intro_box_spawned = true;
 			}
-			if (!instance_exists(obj_textbox) && intro_box_spawned) global.game_state = GAME_STATE.TUTORIAL;
+			if (!instance_exists(obj_textbox) && intro_box_spawned)
+				global.game_state = GAME_STATE.LEVEL; //!!this should be TUTORIAL by default
 		}
 	break;
 	
 	case GAME_STATE.LEVEL:
 		switch global.substate {
-			
 		case SUBSTATE.DEFAULT:
-			
+			if (!first_folder_spawned) {
+				instance_create_layer(103, 798, "Instances", obj_folder);
+				first_folder_spawned = true;
+			}
+		break;
+		
+		case SUBSTATE.JOB_CHOSEN:
+			if (!pc_spawned) {
+				instance_create_layer(720, 330, "Instances", obj_pc);
+				pc_spawned = true;
+			}
+			if (room == rm_pc) {
+				global.substate = SUBSTATE.IN_COMPUTER;
+			}
+		break;
+		
+		case SUBSTATE.IN_COMPUTER:
 		break;
 		
 		}

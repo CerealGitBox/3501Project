@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Paper",
-    "path":"folders/Sprites/UI/Paper.yy",
+    "name":"Folders",
+    "path":"folders/Sprites/Folders.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

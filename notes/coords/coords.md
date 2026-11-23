@@ -1,20 +1,20 @@
 all CPU parts have scale 0.8
 
 main CPU:
-	x = 452
-	y = 33
+	x = 960
+	y = 540
 ALU:
-	x = 825
-	y = 675
+	x = 955
+	y = 753
 Clock:
-	x = 1214
-	y = 779
+	x = 1297
+	y = 871
 FlashMem:
-	x = 750
-	y = 273
+	x = 1014
+	y = 418
 ICP:
-	x = 505
-	y = 140
+	x = 574
+	y = 371
 SRAM:
-	x = 1088
-	y = 430
+	x = 1138
+	y = 497
