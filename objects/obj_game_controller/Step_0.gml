@@ -35,7 +35,14 @@ switch global.game_state {
 			}
 		break;
 		
-		case SUBSTATE.IN_COMPUTER:
+		case SUBSTATE.IN_MINIGAME:
+			if (room == rm_minigame) {
+				if (!minigame_spawned) {
+					instance_create_layer(0, 0, "Instances",
+					global.active_part.minigame);
+					minigame_spawned = true;
+				}
+			}
 		break;
 		
 		}

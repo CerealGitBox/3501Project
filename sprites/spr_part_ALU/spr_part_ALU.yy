@@ -19,7 +19,7 @@
   "height":155,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"5dc46cd9-1285-4a99-a11a-2ec3cb18bed3","blendMode":0,"displayName":"default","isLocked":false,"name":"5dc46cd9-1285-4a99-a11a-2ec3cb18bed3","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"9b39b6ba-8704-41be-bb09-13cf89fa23ad","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"9b39b6ba-8704-41be-bb09-13cf89fa23ad","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_part_ALU",
   "nineSlice":null,

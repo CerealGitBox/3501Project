@@ -19,6 +19,7 @@
   "height":1014,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"89ec1546-0f0d-41e5-b003-ce92370cbbb0","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"89ec1546-0f0d-41e5-b003-ce92370cbbb0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"5dc46cd9-1285-4a99-a11a-2ec3cb18bed3","blendMode":0,"displayName":"default","isLocked":false,"name":"5dc46cd9-1285-4a99-a11a-2ec3cb18bed3","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_cpu_back",

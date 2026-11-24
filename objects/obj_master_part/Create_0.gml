@@ -7,6 +7,7 @@ That means DO NOT change it unless you know what you're doing
 
 broken = false;
 part_sprite = noone;
+border_sprite = noone;
 spr_scale = 0;
 
 minigame = noone;

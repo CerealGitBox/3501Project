@@ -62,6 +62,7 @@ intro_box_spawned = false;
 first_folder_spawned = false;
 pc_spawned = false;
 cpu_spawned = false;
+minigame_spawned = false;
 
 global.game_finished = false;
 	//flag to check if player has completed the whole game

@@ -20,7 +20,7 @@ ds_map_add(str_to_obj, "SRAM", obj_part_SRAM);
 
 cpu_pos_x = 960;
 cpu_pos_y = 540
-part_x_pos = [955, 1297, 1014, 574, 1138];
+part_x_pos = [955, 1297, 1014, 574, 1183];
 part_y_pos = [753, 871, 418, 371, 497];
 
 //CPU sprite vars
