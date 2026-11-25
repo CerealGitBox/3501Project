@@ -37,25 +37,24 @@ global.active_part = noone;
 global.part_list = [];
 	//global array to track what parts currently need to be fixed
 
-var _fps = game_get_speed(gamespeed_fps);
 global.level_timers = [
-_fps * 60 * 4,		//4 minutes
-_fps * 60 * 3,		//3 minutes
-_fps * 60 * 2,		//2 minutes
-_fps * 60 * 2,		//2 minutes
-_fps * 60 * 3		//3 minutes
+60 * 4,		//4 minutes
+60 * 3,		//3 minutes
+60 * 2,		//2 minutes
+60 * 3,		//2 minutes
+60 * 4		//3 minutes
 ];
 	//array containing the values which the death timer will be set each level
-	//_fps is a variable in case cereal wants to change it for some reason
-	//change the last number to change the number of minutes per level
+
+global.death_timer = global.level_timers[0];
+	//if the death timer reaches 0, the player fails the level and must restart
+	//every time a minigame is failed, 15 seconds is subtracted from the timer
+timer_x = 1700;
+timer_y = 50;
 
 global.max_parts = [2, 3, 3, 4, 5];
 	//array dictating how many parts can be broken on a single CPU for each level
 	//ex. level 1 can only have up to 2 parts broken at a time
-
-death_timer = global.level_timers[0];
-	//if the death timer reaches 0, the player fails the level and must restart
-	//every time a minigame is failed, 15 seconds is subtracted from the timer
 
 //spawn flags
 intro_box_spawned = false;

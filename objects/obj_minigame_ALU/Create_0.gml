@@ -1,9 +1,11 @@
 //generate 3-7 random math questions
 //have player answer questions, CPU will say if they were correct or wrong
-//if CPU and player answers match, ALU is fine
-//otherwise, CPU is faulty
+//if player answers correctly, CPU will always repsond true (if fine) or false (if faulty)
+//if player answers incorrectly, CPU has 50/50 chance to respond true or false
 //if player chooses wrong state of CPU, time penalty
+
 parent_part = noone;
+	//set to part id when spawned by an ALU
 
 faulty = false;
 	//bool determining if the ALU is faulty
@@ -11,27 +13,20 @@ faulty = false;
 	//otherwise, correct answers are returned as false
 var _faultr = choose(0, 1);
 if (_faultr == 1) faulty = true;
+if (faulty) {
+	show_debug_message("FAULTY");
+} else show_debug_message("NOT FAULTY");
 question_count = irandom_range(3, 7);
 	//set number of questions
 
-digit_range = 10;	//default for level 1
-switch global.level_number {
-	case 1:		//level 2
-		digit_range = 22;
-	break;
-	case 2:		//level 3
-		digit_range = 31;
-	break;
-	case 3:		//level 4
-		digit_range = 36
-	break;
-	case 4:		//level 5
-		digit_range = 49;
-	break;
-}
+ranges = [10, 22, 31, 36, 49];
+digit_range = ranges[global.level_number];
 	//make numbers larger based on level for difficulty scaling
+
 equations_generated = false;
+submitted_count = 0;
 answers_inputted = false;
+bools_calculated = false;
 
 keyboard_string = "";
 player_text = "";
@@ -39,9 +34,15 @@ player_text = "";
 equations = array_create(7);
 correct_answers = array_create(7);
 input_answers = [];
+bool_outputs = array_create(7);
 
 equation_pos_x = 700;
 answer_pos_x = 1108;
-text_y = [64, 208, 352, 496, 640, 784];
+bool_pos_x = 1400;
+text_y = [64, 208, 352, 496, 640, 784, 928];
 
-timer = 0; //LEFT HERE <--
+level_timers = [10, 10, 8, 8, 5];
+var _fps = game_get_speed(gamespeed_fps); //fix w/ delta later
+timer = _fps * level_timers[global.level_number];
+
+failed_minigame = false;

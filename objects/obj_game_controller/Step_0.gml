@@ -17,6 +17,13 @@ switch global.game_state {
 	break;
 	
 	case GAME_STATE.LEVEL:
+		if (global.death_timer > 0) {
+			global.death_timer -= delta_time / 1000000;
+		} else {
+			show_debug_message("GAME OVER");
+			transition_start(rm_title, sq_fadeout, sq_fadein);
+		}
+		
 		switch global.substate {
 		case SUBSTATE.DEFAULT:
 			if (!first_folder_spawned) {
@@ -38,8 +45,9 @@ switch global.game_state {
 		case SUBSTATE.IN_MINIGAME:
 			if (room == rm_minigame) {
 				if (!minigame_spawned) {
-					instance_create_layer(0, 0, "Instances",
+					var _mg = instance_create_layer(0, 0, "Instances",
 					global.active_part.minigame);
+					_mg.parent_part = global.active_part;
 					minigame_spawned = true;
 				}
 			}
