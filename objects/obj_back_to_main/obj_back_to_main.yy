@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_mg_SRAM_no",
+  "%Name":"obj_back_to_main",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_mg_SRAM_no",
+  "name":"obj_back_to_main",
   "overriddenProperties":[],
   "parent":{
-    "name":"Minigames",
-    "path":"folders/Objects/Minigames.yy",
+    "name":"Buttons",
+    "path":"folders/Objects/Buttons.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mg_SRAM_no",
-    "path":"sprites/spr_mg_SRAM_no/spr_mg_SRAM_no.yy",
+    "name":"spr_back_to_main",
+    "path":"sprites/spr_back_to_main/spr_back_to_main.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,4 +1,13 @@
 switch global.substate {
+	case SUBSTATE.DEFAULT:
+		if (!global.mid_transition && wraps && !alarms_set) {
+			if (parts_fixed >= parts_failed) {
+				alarm[0] = 40;
+			} else alarm[1] = 40;
+			alarms_set = true;
+		}
+	break;
+	
 	case SUBSTATE.JOB_CHOSEN:
 		if (point_in_rectangle(mouse_x, mouse_y, x, y,
 		sprite_get_width(pc_sprite)+x,
@@ -34,13 +43,14 @@ switch global.substate {
 		if (!parts_spawned) {
 			for (var i = 0; i < array_length(global.all_parts); i++) {
 				var _part = instance_create_layer(part_x_pos[i], part_y_pos[i],
-				"Instances", str_to_obj[? global.all_parts[i]]);
+				"CPU_parts", str_to_obj[? global.all_parts[i]]);
 				if (array_contains(global.part_list, global.all_parts[i])) {
 					_part.broken = true;
 				}
+				array_push(global.part_instances, _part);
 			}
 			parts_spawned = true;
 		}
-		cpu_scale = lerp(cpu_scale, 1, 0.1);
+		if (!global.mid_transition) cpu_scale = lerp(cpu_scale, 1, 0.1);
 	break;
 }

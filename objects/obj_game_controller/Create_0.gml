@@ -60,8 +60,15 @@ global.max_parts = [2, 3, 3, 4, 5];
 intro_box_spawned = false;
 first_folder_spawned = false;
 pc_spawned = false;
-cpu_spawned = false;
 minigame_spawned = false;
+all_parts_fixed = true;
+back_main_spawned = false;
+//resetting these flags is handled internally within the substate switch case
+
+global.money = 0;
+	//player must earn a certain amount of money to pass each level
+	//fixing CPU parts awards money, more parts fixed = more money
+	//every failed minigame halves money
 
 global.game_finished = false;
 	//flag to check if player has completed the whole game

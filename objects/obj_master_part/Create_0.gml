@@ -8,8 +8,10 @@ That means DO NOT change it unless you know what you're doing
 str_name = "";
 
 broken = false;
+failed = false;
 part_sprite = noone;
 coll_sprite = noone;
+x_off = 0;
 border_sprite = noone;
 spr_scale = 0;
 

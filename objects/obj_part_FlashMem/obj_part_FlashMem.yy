@@ -39,6 +39,9 @@
     "name":"spr_part_FlashMem",
     "path":"sprites/spr_part_FlashMem/spr_part_FlashMem.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_part_FlashMem_collision",
+    "path":"sprites/spr_part_FlashMem_collision/spr_part_FlashMem_collision.yy",
+  },
   "visible":true,
 }

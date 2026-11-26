@@ -1,6 +1,6 @@
 var _fps = game_get_speed(gamespeed_fps);
 spawn_intervals = [
-_fps * 35,	//level 1
+_fps * 10,	//level 1
 _fps * 30,	//level 2
 _fps * 25,	//level 3
 _fps * 20,	//level 4

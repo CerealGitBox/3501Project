@@ -5,6 +5,7 @@ global.all_parts = [
 "ICP",			//instruction control pipeline
 "SRAM"			//data SRAM
 ];
+global.part_instances = [];
 
 //this constructor makes folder structs
 //it takes 1 argument:

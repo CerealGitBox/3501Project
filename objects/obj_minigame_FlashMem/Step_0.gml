@@ -1,10 +1,12 @@
 switch global.substate {
 	case SUBSTATE.IN_MINIGAME:
-		if (timer > 0) {
-			timer -= delta_time / 1000000;
-		} else failed_minigame = true;
+		var _pc = instance_find(obj_pc, 0);
 		
 		if (!answers_inputted) {
+			if (timer > 0) {
+				timer -= delta_time / 1000000;
+			} else failed_minigame = true;
+			
 			player_text = keyboard_string;
 			if (keyboard_check_pressed(vk_enter)) {
 				if (string_length(player_text) > 0) {
@@ -32,6 +34,15 @@ switch global.substate {
 		if (answers_compared && !failed_minigame) {
 			show_debug_message("MINIGAME WON");
 			parent_part.broken = false;
+			_pc.parts_fixed++;
+			global.substate = SUBSTATE.IN_COMPUTER;
+			transition_start(rm_pc, sq_fadeout, sq_fadein);
+		}
+		
+		if (failed_minigame) {
+			parent_part.broken = false;
+			parent_part.failed = true;
+			_pc.parts_failed++;
 			global.substate = SUBSTATE.IN_COMPUTER;
 			transition_start(rm_pc, sq_fadeout, sq_fadein);
 		}

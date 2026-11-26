@@ -10,6 +10,7 @@ broken_parts = global.part_list;
 parent_folder = noone;
 
 parts_spawned = false;
+alarms_set = false;
 
 str_to_obj = ds_map_create();
 ds_map_add(str_to_obj, "ALU", obj_part_ALU);
@@ -18,12 +19,13 @@ ds_map_add(str_to_obj, "FlashMem", obj_part_FlashMem);
 ds_map_add(str_to_obj, "ICP", obj_part_ICP);
 ds_map_add(str_to_obj, "SRAM", obj_part_SRAM);
 
+parts_fixed = 0;
+parts_failed = 0;
+
 cpu_pos_x = 960;
 cpu_pos_y = 540
 part_x_pos = [955, 1297, 1014, 574, 1183];
 part_y_pos = [753, 871, 418, 371, 497];
-
-//CPU sprite vars
 cpu_scale = 0;
 
 //cam vars
@@ -38,3 +40,6 @@ cam_target_x = 960;
 cam_target_y = 540;
 
 zooming = false;
+
+wraps = false;
+	//if true it's wraps

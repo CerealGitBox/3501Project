@@ -35,6 +35,7 @@ equations = array_create(7);
 correct_answers = array_create(7);
 input_answers = [];
 bool_outputs = array_create(7);
+wrong_count = 0;
 
 equation_pos_x = 700;
 answer_pos_x = 1108;

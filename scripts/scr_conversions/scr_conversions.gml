@@ -23,3 +23,13 @@ function dec_to_bin(_dec, _min_len = 1) {
 	}
 	return _bin;
 }
+
+function make_hex() {
+	var _chars = ["0", "1", "2", "3", "4", "5", "6", "7",
+                  "8", "9", "A", "B", "C", "D", "E", "F"];
+	var _hex = "0x";
+	for (var i = 0; i < 6; i++) {
+		_hex += _chars[irandom(15)];
+	}
+	return _hex;
+}

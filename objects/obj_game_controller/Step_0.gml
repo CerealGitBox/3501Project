@@ -26,6 +26,7 @@ switch global.game_state {
 		
 		switch global.substate {
 		case SUBSTATE.DEFAULT:
+			back_main_spawned = false;
 			if (!first_folder_spawned) {
 				instance_create_layer(103, 798, "Instances", obj_folder);
 				first_folder_spawned = true;
@@ -39,6 +40,27 @@ switch global.game_state {
 			}
 			if (room == rm_pc) {
 				global.substate = SUBSTATE.IN_COMPUTER;
+			}
+		break;
+		
+		case SUBSTATE.IN_COMPUTER:
+			minigame_spawned = false;
+			var _pc = instance_find(obj_pc, 0);
+			if (_pc != noone && _pc.parts_spawned) {
+				all_parts_fixed = array_length(global.part_instances) > 0;
+				for (var i = 0; i < array_length(global.part_instances); i++) {
+					var _part = global.part_instances[i];
+					if (_part.broken) {
+						all_parts_fixed = false;
+						break;
+					}
+				}
+				
+				if (all_parts_fixed && !back_main_spawned && !global.mid_transition) {
+					instance_create_layer(70, 773, "Instances", obj_back_to_main);
+					pc_spawned = false;
+					back_main_spawned = true;
+				}
 			}
 		break;
 		
