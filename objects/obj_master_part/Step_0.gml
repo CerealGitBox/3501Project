@@ -4,7 +4,10 @@ switch global.substate {
 	break;
 	
 	case SUBSTATE.IN_COMPUTER:
-		spr_scale = obj_pc.cpu_scale;
+		//DO NOT TOUCH THIS
+		var _pc = instance_find(obj_pc, 0);
+		spr_scale = _pc.cpu_scale;
+		//THE FACT THAT THIS WORKS IS NOTHING SHORT OF A MIRACLE
 		if (point_in_rectangle(mouse_x, mouse_y,
 		(x-sprite_get_width(coll_sprite)/2)+x_off, y-sprite_get_height(coll_sprite)/2,
 		(x+sprite_get_width(coll_sprite)/2)+x_off, y+sprite_get_height(coll_sprite)/2)) {
