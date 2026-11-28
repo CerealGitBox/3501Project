@@ -15,7 +15,7 @@ alarms_set = false;
 str_to_obj = ds_map_create();
 ds_map_add(str_to_obj, "ALU", obj_part_ALU);
 ds_map_add(str_to_obj, "Clock", obj_part_Clock);
-ds_map_add(str_to_obj, "FlashMem", obj_part_FlashMem);
+ds_map_add(str_to_obj, "InsDec", obj_part_InsDec);
 ds_map_add(str_to_obj, "ICP", obj_part_ICP);
 ds_map_add(str_to_obj, "SRAM", obj_part_SRAM);
 
@@ -43,3 +43,4 @@ zooming = false;
 
 wraps = false;
 	//if true it's wraps
+good_timer_done = false;

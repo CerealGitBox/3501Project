@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"obj_part_FlashMem",
+  "%Name":"obj_part_InsDec",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -8,7 +8,7 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_part_FlashMem",
+  "name":"obj_part_InsDec",
   "overriddenProperties":[],
   "parent":{
     "name":"Parts",
@@ -36,12 +36,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_part_FlashMem",
-    "path":"sprites/spr_part_FlashMem/spr_part_FlashMem.yy",
+    "name":"spr_part_InsDec",
+    "path":"sprites/spr_part_InsDec/spr_part_InsDec.yy",
   },
   "spriteMaskId":{
-    "name":"spr_part_FlashMem_collision",
-    "path":"sprites/spr_part_FlashMem_collision/spr_part_FlashMem_collision.yy",
+    "name":"spr_part_InsDec_collision",
+    "path":"sprites/spr_part_InsDec_collision/spr_part_InsDec_collision.yy",
   },
   "visible":true,
 }

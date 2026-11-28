@@ -14,7 +14,7 @@ switch global.substate {
 					global.active_part = id;
 					global.substate = SUBSTATE.IN_MINIGAME;
 					obj_pc.cpu_scale = 0;
-					transition_start(rm_minigame, sq_fadeout_white, sq_fadein);
+					transition_start(rm_minigame, sq_fadeout_white, sq_fadein_white);
 				} else {
 					show_debug_message("NOT BROKEN!!!!");
 				}

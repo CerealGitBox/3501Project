@@ -1,7 +1,7 @@
 global.all_parts = [
 "ALU",			//arithmetic logic unit
 "Clock",		//CPU clock
-"FlashMem",		//flash memory
+"InsDec",		//instruction decoder
 "ICP",			//instruction control pipeline
 "SRAM"			//data SRAM
 ];
@@ -22,7 +22,7 @@ function make_folder(_text) constructor {
 		var _part_list = [
 		"ALU",			//arithmetic logic unit
 		"Clock",		//CPU clock
-		"FlashMem",		//flash memory
+		"InsDec",		//instruction decoder
 		"ICP",			//instruction control pipeline
 		"SRAM"			//data SRAM
 		];
@@ -30,7 +30,7 @@ function make_folder(_text) constructor {
 		//string bools
 		var _has_ALU = false;
 		var _has_Clock = false;
-		var _has_FlashMem = false;
+		var _has_InsDec = false;
 		var _has_ICP = false;
 		var _has_SRAM = false;
 		
@@ -63,8 +63,8 @@ function make_folder(_text) constructor {
 				case "Clock":
 					_has_Clock = true;
 				break;
-				case "FlashMem":
-					_has_FlashMem = true;
+				case "InsDec":
+					_has_InsDec = true;
 				break;
 				case "ICP":
 					_has_ICP = true;
@@ -84,9 +84,9 @@ function make_folder(_text) constructor {
 			var _rstring = irandom_range(0, array_length(global.Clock_text) - 1);
 			text += global.Clock_text[_rstring];
 		}
-		if (_has_FlashMem) {
-			var _rstring = irandom_range(0, array_length(global.FlashMem_text) - 1);
-			text += global.FlashMem_text[_rstring];
+		if (_has_InsDec) {
+			var _rstring = irandom_range(0, array_length(global.InsDec_text) - 1);
+			text += global.InsDec_text[_rstring];
 		}
 		if (_has_ICP) {
 			var _rstring = irandom_range(0, array_length(global.ICP_text) - 1);

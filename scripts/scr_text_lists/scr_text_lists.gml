@@ -43,13 +43,13 @@ global.Clock_text = [
 "Clock 6;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
 ];
 
-global.FlashMem_text = [
-"FlashMem 1;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-"FlashMem 2;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-"FlashMem 3;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-"FlashMem 4;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-"FlashMem 5;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-"FlashMem 6;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+global.InsDec_text = [
+"InsDec 1;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"InsDec 2;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"InsDec 3;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"InsDec 4;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"InsDec 5;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+"InsDec 6;bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
 ];
 
 global.ICP_text = [

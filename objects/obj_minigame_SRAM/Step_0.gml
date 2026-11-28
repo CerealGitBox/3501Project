@@ -11,8 +11,8 @@ switch global.substate {
 		if (!answers_submitted) {
 			//yes, current hex is in cache
 			if (point_in_rectangle(mouse_x, mouse_y, yes_button_x, button_y,
-			yes_button_x+sprite_get_width(spr_mg_SRAM_yes),
-			button_y+sprite_get_height(spr_mg_SRAM_yes))) {
+			yes_button_x+sprite_get_width(spr_mg_button_yes),
+			button_y+sprite_get_height(spr_mg_button_yes))) {
 				if (mouse_check_button_pressed(mb_left)) {
 					array_push(player_answers, questions[questions_answered]);
 					questions_answered++;
@@ -20,8 +20,8 @@ switch global.substate {
 			}
 			//no, current hex is not in cache
 			if (point_in_rectangle(mouse_x, mouse_y, no_button_x, button_y,
-			no_button_x+sprite_get_width(spr_mg_SRAM_no),
-			button_y+sprite_get_height(spr_mg_SRAM_no))) {
+			no_button_x+sprite_get_width(spr_mg_button_no),
+			button_y+sprite_get_height(spr_mg_button_no))) {
 				if (mouse_check_button_pressed(mb_left)) {
 					array_push(player_answers, "NULL");
 					questions_answered++;

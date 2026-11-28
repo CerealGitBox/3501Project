@@ -9,7 +9,7 @@ ALU:
 Clock:
 	x = 1297
 	y = 871
-FlashMem:
+InsDec:
 	x = 1014
 	y = 418
 ICP:
